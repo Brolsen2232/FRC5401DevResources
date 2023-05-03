@@ -1,6 +1,5 @@
 package frc.robot.Subsystems;
 
-import frc.robot.Hardware;
 import frc.robot.Robot;
 import frc.robot.Utilities.SparkMAXMotorGroup;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -21,6 +20,9 @@ public class ExampleDrivebase extends SubsystemBase {
 
   public ExampleDrivebase() {
     
+    leftDrives.setInverted(true);
+    rightDrives.setInverted(false);
+
   }
 
   public void setPercentOutput(double leftPower, double rightPower) {
