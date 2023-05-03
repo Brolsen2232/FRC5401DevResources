@@ -2,6 +2,7 @@ package frc.robot.Subsystems;
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Robot;
 
 public class ExampleClaw extends SubsystemBase {
     private Solenoid firstStage;
@@ -11,8 +12,8 @@ public class ExampleClaw extends SubsystemBase {
 
 
     public ExampleClaw(){
-        firstStage = new Solenoid(PneumaticsModuleType.CTREPCM, 1);
-        secondStage = new Solenoid(PneumaticsModuleType.CTREPCM, 2);
+        firstStage = Robot.hardware.firstClawStage;
+        secondStage = Robot.hardware.secondClawStage;
     }
 
     public void setSolenoidStatuses(String mode){
